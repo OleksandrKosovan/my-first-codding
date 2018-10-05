@@ -1,0 +1,38 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: #E6E6E6;
+}
+.blockOne{
+	height: 90px;
+	background: white;	
+}
+.imgOne{
+	height: 99%;
+	margin-left: 50px;
+}
+.menuOne>li{
+	display: inline-block;
+}
+.menuOne a{
+    width: 110px;
+	padding: 36px 0;
+	display: block;
+	background: white;
+	color: black;
+	text-align: center;
+	margin-bottom: 0px;
+	text-decoration: none;
+}
+.menuOne{
+	position: absolute;
+	width: 460px;
+	top: 0px;
+	right: 81px;
+}
+.menuOne a:hover {
+	background: #0059b7;
+	color: white;
+}

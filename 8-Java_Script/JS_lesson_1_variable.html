@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<div class="something"></div>
+<script>
+	document.getElementsByClassName('something')[0].innerHTML = 'Hello, world!';
+</script>
+
+<script>
+	var mem = 'LOL';
+	var name = 'Sasha';
+	var surname = 'Kosovan';
+	var age = 19;
+	var answer = 42;
+	console.log(answer);
+	console.log(name);
+	console.log(age+answer);
+</script>
+
+<script>
+	var length = 10;
+	var height = 3;
+	var area = length * height;// 30
+		console.log(area);
+	var x = length - 20; 
+		console.log(x);
+	var a = ((length - height + 1)/2)*10; 
+		console.log(a);
+	var name = 'Ivan';
+	var surname = 'Kychatyi';
+	var fullname = name + surname;
+	console.log(fullname);
+	var fullname1 = 'Mr. ' + name + ' ' + surname; // 'Mr. Ivan Kychatui'
+	console.log(fullname1);
+	
+	var ccc = 3;
+	console.log(ccc);
+	console.log(++ccc);
+</script>
+
+<script>
+	var str = "Johnny got his gun"; 
+	var wrapped = '<div>' + str + '</div>';
+	console.log(wrapped);
+	
+	var tag = 'b';
+	var str = 'Hello, Dolly!';
+	var wrapped1 = '<'+tag+'>'+str+'</'+tag+'>';
+	console.log(wrapped1); 
+</script>
+
+</body>
+</html>

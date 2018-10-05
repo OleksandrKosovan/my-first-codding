@@ -1,0 +1,142 @@
+ 
+drop database if exists home;
+create database home;
+use home;
+
+create table city(id int primary key auto_increment, name varchar(20));
+
+create table library(id int primary key auto_increment, name varchar(30), adress varchar(40),
+id_city int);
+
+create table book(id int primary key auto_increment, name varchar(30), pages int,
+id_author int);
+
+create table author(id int primary key auto_increment, name varchar(20), surname varchar(20));
+
+alter table library add constraint foreign key(id_city) references city(id);
+
+create table library_book(id_library int, id_book int);
+alter table library_book add constraint foreign key(id_library) references library(id);
+alter table library_book add constraint foreign key(id_book) references book(id);
+alter table book add constraint foreign key(id_author) references author(id);
+
+
+insert into book(name, pages) values 
+('LOTR', 1000),
+('soul', 200),
+('harry potter', 300),
+('monster', 320);
+ 
+update book set pages = 500 where name like 'monster';
+ 
+delete from book where pages > 500;
+ 
+select * from book; 
+ 
+select name from book;
+ 
+select name, pages from book where name like 'soul';
+ 
+select name, pages from book where name like '%s%';
+ 
+select name, pages from book where name like 's___';
+ 
+select name, pages from book where name like '%o___';
+ 
+select name, pages from book where name like 'soul' or name like 'm%';
+ 
+
+
+select name, pages from book where name in('soul', 'monster');
+ 
+select name, pages from book where pages > 100 and pages < 400;
+ 
+select name, pages from book where pages between 100 and 400;
+ 
+select name, pages from book where name <> 'soul';
+ 
+select name, pages from book where name like "s%" and pages > 100;
+ 
+select distinct pages from book;
+ 
+select min(pages) from book;
+ 
+select min(name) from book;
+ 
+select sum(pages) as max from book;
+ 
+select b.pages, b.name from book b;
+ 
+drop database if exists home;
+create database home;
+use home;
+
+create table city(id int primary key auto_increment, name varchar(20));
+
+create table library(id int primary key auto_increment, name varchar(30), adress varchar(40),
+id_city int);
+
+create table book(id int primary key auto_increment, name varchar(30), pages int,
+id_author int);
+
+create table author(id int primary key auto_increment, name varchar(20), surname varchar(20));
+
+alter table library add constraint foreign key(id_city) references city(id);
+
+create table library_book(id_library int, id_book int);
+alter table library_book add constraint foreign key(id_library) references library(id);
+alter table library_book add constraint foreign key(id_book) references book(id);
+alter table book add constraint foreign key(id_author) references author(id);
+
+insert into book(name, pages) values 
+('LOTR', 1000),
+('soul', 200),
+('harry potter', 300),
+('monster', 320);
+
+set sql_safe_updates = 0;
+set foreign_key_checks = 0;
+
+update book set pages = 500 where name like 'monster';
+
+delete from book where pages > 500;
+
+select * from book; 
+
+select name from book;
+
+select name, pages from book where name like 'soul';
+
+select name, pages from book where name like '%s%';
+
+select name, pages from book where name like 's___';
+
+select name, pages from book where name like '%o___';
+
+select name, pages from book where name like 'soul' or name like 'm%';
+
+select name, pages from book where name in('soul', 'monster');
+
+select name, pages from book where pages > 100 and pages < 400;
+
+select name, pages from book where pages between 100 and 400;
+
+select name, pages from book where name <> 'soul';
+
+select name, pages from book where name like "s%" and pages > 100;
+
+select distinct pages from book;
+
+select min(pages) from book;
+
+select min(name) from book;
+
+select sum(pages) as max from book;
+
+select b.pages, b.name from book b;
+
+select avg(pages) from book;
+
+select count(id) from book;
+
+SET autocommit = 0;

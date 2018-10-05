@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var user = 'Sasha';
+	var greeting = 'Hello, Mr. ' + user;
+	alert(greeting);
+	
+	var a = 'Hello, my name is John!';
+	var b = a.replace("John", 'Petro');
+	console.log(b);
+	
+	var a2 = 'I am A CaMeL';
+	a2 = a2.toLowerCase();
+	console.log(a2);
+	
+	var fruits = 'bananas, apples, carrots';
+	var real_fruits = fruits.replace("carrot", "apricot");
+
+	console.log(real_fruits);
+	console.log(fruits);
+</script>
+
+<script>
+	var get_square = function(num){
+		return num * num;
+	}
+
+	var a = 3;
+	var b = get_square(a);
+	
+	console.log(b);
+
+	var wrap_in_tag = function(str, tagname){
+		var wrapped = '<' + tagname + '>' + str + '</' + tagname + '>';
+		return wrapped;
+	}
+
+	var a = 'span';
+	var g = 'Hello, I love you, could you tell me your name';
+
+	var html = wrap_in_tag(g, a);
+	
+	console.log(html);
+</script>
+
+<script>
+	var he = 'John';
+	var she = 'Mary';
+
+	var merry = function(bride, groom){
+		return 'Congratulations, ' + groom + ' and ' + bride + ', you are married!';
+	}
+
+	var happy_message = merry(she, he);
+	console.log(happy_message);
+</script>
+
+<script>
+	var add_respect = function(sir_name){
+		var respectful_name = 'Sir ' + sir_name;
+		console.log('name is', respectful_name);
+		return respectful_name;
+	}
+	console.log(add_respect('John Doe'));
+</script>
+
+<script>
+	var round_area = function(diameter){
+		var radius = diameter/2;
+		var area = 3.14*radius*radius;
+		return area;
+	}
+		console.log(round_area(10));
+</script>
+
+<script>
+	var wrap_in_tag = function(str, tag){
+		var new_str = '<' + tag + '>' + str + '</' + tag + '>';
+		return new_str;
+	}
+	var wrap_in_div = function(str){
+		var new_str = wrap_in_tag(str, 'div');
+		return new_str;
+	}
+	console.log(wrap_in_div('LOL'));
+</script>
+
+<script>
+	var counter = 0;
+	var get_num = function(){
+		return ++counter;
+	}
+
+	get_num(); // 1
+	get_num(); // 2 
+	console.log(get_num());
+	get_num(); // 4 
+	console.log(get_num());
+	
+</script>
+
+<script>
+	var site_domain = 'example.com';	
+	var get_link = function(str){
+		return 'http://'+site_domain+'/'+str;
+	}
+	console.log(get_link('lol'));
+</script>
+
+</body>
+</html>
